@@ -245,4 +245,12 @@ public class MyContext : DbContext
 
     // new Review.ReviewEntityTypeConfiguration().Configure(modelBuilder.Entity<Review>());
   }
+
+  // コンバーターをオーバーライドして、値コンバートを追加
+  protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+  {
+    // EmailAddress型のプロパティにEmailAddressConverterを適用s
+    configurationBuilder.Properties<EmailAddress>()
+        .HaveConversion<EmailAddressConverter>()
+  }
 }
