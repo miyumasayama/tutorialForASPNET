@@ -26,5 +26,7 @@ public class MyContext : DbContext
       Rev.ToTable("Comments").HasKey(base => base.Code)
       Rev.Property(e => e.Body).HasColumnName("Messsage").HasMaxLength(150)
     })
+
+    // new Review.ReviewEntityTypeConfiguration().Configure(modelBuilder.Entity<Review>());
   }
 }
