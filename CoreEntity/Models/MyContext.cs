@@ -27,6 +27,15 @@ public class MyContext : DbContext
       Rev.Property(e => e.Body).HasColumnName("Messsage").HasMaxLength(150)
     })
 
+    // 値コンバーター
+    // dbに値を出し入れするときに、型を変換できる
+    moduleBuilder.Entity<User>(u =>
+    {
+      u.Property(e => e.UserClass).HasConversion(
+      v => v.Tostring(), // 書き込み時に文字列に変換
+      v => (UserClass)Enum.Parse(typeof UserClass), v) //読み込み時にUserClassオブジェクトに解析
+    })
+
     // Fluent APIを使用して、初期データを設定
     modelBuilder.Entity<Book>(e =>
     {

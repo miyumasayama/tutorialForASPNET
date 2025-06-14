@@ -23,6 +23,8 @@ public class User
 
   public DateTime Birth { get; set; } = DateTime.Now;
   // [Column(TypeName = "nvarchar(15)")]
+
+  // UserClass列挙型のUserClassプロパティ
   public UserClass UserClass { get; set; } = UserClass.Guest;
 
   public Author Author { get; set; } = null!;
