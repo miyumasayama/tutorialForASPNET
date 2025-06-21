@@ -36,6 +36,8 @@ public class MyContext : DbContext
       v => (UserClass)Enum.Parse(typeof UserClass), v) //読み込み時にUserClassオブジェクトに解析
     })
 
+    // ViewPuvCoreエンティティをビューに紐付け
+    moduleBuilder.Entity<ViewPubCount>().ToView("ViewPubCounts")
     // Fluent APIを使用して、初期データを設定
     modelBuilder.Entity<Book>(e =>
     {
@@ -249,7 +251,7 @@ public class MyContext : DbContext
   // コンバーターをオーバーライドして、値コンバートを追加
   protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
   {
-    // EmailAddress型のプロパティにEmailAddressConverterを適用s
+    // EmailAddress型のプロパティにEmailAddressConverterを適用
     configurationBuilder.Properties<EmailAddress>()
         .HaveConversion<EmailAddressConverter>()
   }
