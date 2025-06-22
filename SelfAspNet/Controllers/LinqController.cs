@@ -279,15 +279,13 @@ public class LinqController : Controller
         return View(bs);
     }
 
-    // 複数プロパティで絞り込み
-    // グループ化キーそのものをオブジェクトにして渡す
     public IActionResult GroupMini()
     {
         // メソッド構文
         var bs = _db.Books
           .GroupBy(
              b => b.Publisher,
-             b => new MiniBook(b.Title, b.Price)
+             b => new MiniBook(b.Title, b.Price)  // タイトル,価格のみをオブジェクトで返す
           );
 
         // クエリ構文
@@ -298,6 +296,8 @@ public class LinqController : Controller
         return View(bs);
     }
 
+    // 複数プロパティで絞り込み
+    // グループ化キーそのものをオブジェクトにして渡す
     public IActionResult GroupMulti()
     {
         // メソッド構文
@@ -314,14 +314,15 @@ public class LinqController : Controller
         return View(bs);
     }
 
+    // グループ化した結果を絞り込み
     public IActionResult Having()
     {
         // メソッド構文
         var bs = _db.Books
             .GroupBy(b => b.Publisher)
             .Where(group => group.Average(b => b.Price) >= 3000)
-            .Select(group => new HavingBook(
-              group.Key, (int)group.Average(b => b.Price)
+            .Select(Group => new HavingBook(
+                Group.Key, (int)Group.Average(b => b.Price)
             ));
 
         // クエリ構文
