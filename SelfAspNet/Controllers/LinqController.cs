@@ -57,6 +57,9 @@ public class LinqController : Controller
         return View("Items", bs);
     }
 
+    // EndWithは、文字列の末尾が指定した文字列で終わるかどうかを確認する
+    // StartsWithは、文字列の先頭が指定した文字列で始まるかどうかを確認する
+
     public IActionResult StartsWith()
     {
         // メソッド構文
@@ -140,6 +143,8 @@ public class LinqController : Controller
         return Content(bs.Title);
     }
 
+    // AllAsyncは、すべての要素が条件を満たすかどうかを確認する
+    // AnyAsyncは、1つでも条件を満たす要素があるかどうかを確認する
     public async Task<IActionResult> Exists()
     {
         var result = await _db.Books.AnyAsync(b => b.Price >= 4000);
@@ -163,12 +168,15 @@ public class LinqController : Controller
         return View("List", bs);
     }
 
+    // 並び替え
+    // OrderByは、指定したプロパティに基づいて要素を昇順に並べ替える
+    // OrderByDescendingは、指定したプロパティに基づいて要素を降順に並べ替える 
+    // ThenByは、最初の並び替えの結果に基づいて、さらに別のプロパティで昇順に並べ替える
+    // ThenByDescendingは、最初の並び替えの結果に基づいて、さらに別のプロパティで降順に並べ替える
     public IActionResult Order()
     {
         // メソッド構文
-        var bs = _db.Books
-            .OrderByDescending(b => b.Price)
-            .ThenBy(b => b.Published);
+        var bs = _db.Books.OrderByDescending(b => b.Price).ThenBy(b => b.published);
 
         // クエリ構文
         // var bs = from b in _db.Books
