@@ -38,8 +38,8 @@ public class LinqController : Controller
     public IActionResult Basic2()
     {
         var bs = from b in _db.Books
-            where b.Price < 3000
-            select new { Title = b.Title, Price = b.Price };
+                 where b.Price < 3000
+                 select new { Title = b.Title, Price = b.Price };
         return View(bs);
     }
 
@@ -153,11 +153,14 @@ public class LinqController : Controller
         {
             bs = bs.Where(b => b.Title.Contains(keyword));
         }
+
+        // HasValueはNullable型のプロパティに対して使用
         if (released.HasValue && released.Value)
         {
             bs = bs.Where(b => b.Published <= DateTime.Now);
         }
-        return View(bs);
+
+        return View("List", bs);
     }
 
     public IActionResult Order()
@@ -523,7 +526,8 @@ public class LinqController : Controller
             .Select(b => new { Publisher = b.Publisher })
             .Distinct();
 
-        return View(new SelectView{
+        return View(new SelectView
+        {
             Book = book,
             Publishers = new SelectList(
                 list, "Publisher", "Publisher", book.Publisher)
