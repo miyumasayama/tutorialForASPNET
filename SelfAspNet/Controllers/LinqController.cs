@@ -353,12 +353,13 @@ public class LinqController : Controller
         return View("Having", bs);
     }
 
+    // エンティティ同士の結合
     public IActionResult Join()
     {
         // メソッド構文
         var rs = _db.Books
             .Join(_db.Reviews, b => b.Id, rev => rev.BookId,
-            (b, rev) => new BookReviewView(b.Title, rev.Body));
+                (b, rev) => new BookReviewView(b.Title, rev.Body));
 
         // クエリ構文
         // var rs = from b in _db.Books
