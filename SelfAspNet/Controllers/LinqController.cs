@@ -236,13 +236,14 @@ public class LinqController : Controller
         return View(bs);
     }
 
-
+    // Skipは指定された件数のデータを飛ばす
+    // Takeは指定された件数のデータを取得する
     public IActionResult Skip()
     {
         var bs = _db.Books
-            .OrderBy(b => b.Published)
-            .Skip(2)
-            .Take(3);
+          .OrderBy(b => b.published)
+          .Skip(3)
+          .Take(3);
         return View("List", bs);
     }
 
@@ -251,9 +252,9 @@ public class LinqController : Controller
         var pageSize = 3;
         var pageNum = id - 1;
         var bs = _db.Books
-            .OrderBy(b => b.Published)
-            .Skip(pageSize * pageNum)
-            .Take(pageSize);
+          .OrderBy(b => b.Published)
+          .Skip(pageNum * pageSize)
+          .TakepageSize;
         return View("List", bs);
     }
 
