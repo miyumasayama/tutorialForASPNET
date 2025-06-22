@@ -219,14 +219,12 @@ public class LinqController : Controller
     public IActionResult Select()
     {
         // メソッド構文
-        var bs = _db.Books
-            .OrderByDescending(b => b.Published)
+        var bs = _db.Books.OrderByDescending(b => b.published)
             .Select(b => new SummaryBookView(
                 b.Title.Substring(0, 7) + "...",
                 (int)(b.Price * 0.9),
                 b.Published <= DateTime.Now ? "発売中" : "発売予定"
             ));
-
         // クエリ構文
         // var bs = from b in _db.Books
         //          select new SummaryBookView(

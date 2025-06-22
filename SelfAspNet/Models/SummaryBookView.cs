@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
+// ビューとして表示、操作すべきデータを作成= ビューモデル
+// 必ずしも表示データとエンティティの形が一致するとは限らないため、そのような時にビューモデルを作成する
 namespace SelfAspNet.Models;
 
 public record SummaryBookView(
