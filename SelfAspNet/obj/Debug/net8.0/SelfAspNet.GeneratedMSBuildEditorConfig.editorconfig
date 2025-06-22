@@ -1,0 +1,441 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SelfAspNet
+build_property.RootNamespace = SelfAspNet
+build_property.ProjectDir = /Users/miyumasayama/apps/SelfAspNet/SelfAspNet/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/miyumasayama/apps/SelfAspNet/SelfAspNet
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Areas/Manage/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL0FkbWluL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Areas/Manage/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL19WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Areas/Manage/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL19WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Template/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGUvTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Binder/CreateMulti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmluZGVyL0NyZWF0ZU11bHRpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Binder/CreateMulti2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmluZGVyL0NyZWF0ZU11bHRpMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Binder/Custom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmluZGVyL0N1c3RvbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Binder/Upload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmluZGVyL1VwbG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Books/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Books/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Books/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Books/DisplayTemplates/Book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRGlzcGxheVRlbXBsYXRlcy9Cb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Books/DisplayTemplates/ImageUrl.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRGlzcGxheVRlbXBsYXRlcy9JbWFnZVVybC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Books/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Books/EditorTemplates/Currency.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRWRpdG9yVGVtcGxhdGVzL0N1cnJlbmN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Books/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Common/Another.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL0Fub3RoZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Common/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Common/List2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL0xpc3QyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Common/Nest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL05lc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Common/NoLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL05vTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Config/Basic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29uZmlnL0Jhc2ljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Config/Typed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29uZmlnL1R5cGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Entity/Assoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW50aXR5L0Fzc29jLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Filter/Csrf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmlsdGVyL0NzcmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Filter/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmlsdGVyL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Hello/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSGVsbG8vTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Hello/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSGVsbG8vU2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/I18n/Basic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSTE4bi9CYXNpYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/I18n/Ctrl.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSTE4bi9DdHJsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/I18n/de/Template.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSTE4bi9kZS9UZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/I18n/en/Template.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSTE4bi9lbi9UZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/I18n/Global.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSTE4bi9HbG9iYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/I18n/ja/Template.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSTE4bi9qYS9UZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/I18n/Template.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSTE4bi9UZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/I18n/Template.de.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSTE4bi9UZW1wbGF0ZS5kZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/I18n/Template.ja.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSTE4bi9UZW1wbGF0ZS5qYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/Basic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9CYXNpYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/Basic2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9CYXNpYzIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/Filter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9GaWx0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/Group.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9Hcm91cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/GroupMini.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9Hcm91cE1pbmkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/GroupMulti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9Hcm91cE11bHRpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/Having.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9IYXZpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/Items.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9JdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/Join.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9Kb2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/Select.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9TZWxlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/SortGrid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9Tb3J0R3JpZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Linq/ViewModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlucS9WaWV3TW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Manage/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlL0Fib3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Practice/Check2_4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJhY3RpY2UvQ2hlY2syXzQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Razor/Attr.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmF6b3IvQXR0ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Razor/Replace.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmF6b3IvUmVwbGFjZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Razor/sample.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmF6b3Ivc2FtcGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Razor/StatIf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmF6b3IvU3RhdElmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Razor/Suppress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmF6b3IvU3VwcHJlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Result/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdWx0L0Fib3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Result/AjaxForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdWx0L0FqYXhGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Result/Manage/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdWx0L01hbmFnZS9BYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Result/_AjaxResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdWx0L19BamF4UmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Reviews/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Reviews/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Reviews/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Reviews/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Reviews/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/Components/List/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTGlzdC9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/Components/Meta/Base.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTWV0YS9CYXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/Components/Meta/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvTWV0YS9EZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/MyError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL015RXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/_CookieConsentPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Db29raWVDb25zZW50UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/_MyLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19NeUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/_SubLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TdWJMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/_Time.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19UaW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/State/Cookie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGUvQ29va2llLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/State/Session.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGUvU2Vzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Anchor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0FuY2hvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Cache.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0NhY2hlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Cover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0NvdmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Custom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0N1c3RvbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/For.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0Zvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Func.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0Z1bmMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Highlight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0hpZ2hsaWdodC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Image.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0ltYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Import.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0ltcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Link.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL0xpbmsuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/MyRadio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL015UmFkaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Path.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL1BhdGguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/Raw.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL1Jhdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/SelectGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL1NlbGVjdEdyb3VwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Tag/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFnL19WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miyumasayama/apps/SelfAspNet/SelfAspNet/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fmojjp21dy
