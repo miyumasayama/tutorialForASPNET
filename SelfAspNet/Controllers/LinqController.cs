@@ -334,16 +334,16 @@ public class LinqController : Controller
         return View(bs);
     }
 
+    // グループ化した結果を並び替え
     public IActionResult HavingSort()
     {
         // メソッド構文
         var bs = _db.Books
             .GroupBy(b => b.Publisher)
-            .OrderBy(group => group.Average(b => b.Price))
-            .Select(group => new HavingBook(
-                group.Key, (int)group.Average(b => b.Price)
+            .OrderBy(g => g.Average(b => b.Price))
+            .Select(g => new HavingBook(
+                g.Key, (int)g.Average(b => b.Price)
             ));
-
         // クエリ構文
         // var bs = from b in _db.Books
         //     group b by b.Publisher into g
