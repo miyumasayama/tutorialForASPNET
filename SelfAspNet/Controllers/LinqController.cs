@@ -279,6 +279,8 @@ public class LinqController : Controller
         return View(bs);
     }
 
+    // 複数プロパティで絞り込み
+    // グループ化キーそのものをオブジェクトにして渡す
     public IActionResult GroupMini()
     {
         // メソッド構文
