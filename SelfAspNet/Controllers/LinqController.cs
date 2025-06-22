@@ -471,7 +471,7 @@ public class LinqController : Controller
             new Book
             {
                 Isbn = "978-4-7981-8094-6",
-                Title = "独習Java 第6版",  // null,
+                Title = "独習Java 第6版",  // 例えばnullにすると、Titleはnull非許容なのでエラーとなり、Booksのdbは変化しない,
                 Price = 3960,
                 Publisher = "翔泳社",
                 Published = new DateTime(2024, 02, 15),
@@ -484,7 +484,7 @@ public class LinqController : Controller
     }
     public async Task<IActionResult> Transaction2()
     {
-        using (var tx = _db.Database.BeginTransaction())
+        using (var tx = _db.Database.BeginTransaction()) // 毎確なトランザクションの宣言
         {
             try
             {
@@ -503,12 +503,12 @@ public class LinqController : Controller
                 _db.Books.Where(b => b.Publisher == "翔泳社")
                     .ExecuteUpdate(setters =>
                         setters.SetProperty(b => b.Price, b => (int)(b.Price * 0.8)));
-                tx.Commit();
+                tx.Commit(); // 更新のコミット
                 return Content("データベース処理が正常終了しました。");
             }
             catch (Exception)
             {
-                tx.Rollback();
+                tx.Rollback(); //更新のロールバック
                 return Content("データベース処理に失敗しました。");
             }
         }
