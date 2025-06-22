@@ -371,17 +371,20 @@ public class LinqController : Controller
 
     public async Task<IActionResult> Update()
     {
+        // 更新対象の件数分だけ命令が発行されるため、オーバーヘッドが高い
         foreach (var b in _db.Books.Where(b => b.Publisher == "翔泳社"))
         {
             b.Price = (int)(b.Price * 0.8);
         }
         await _db.SaveChangesAsync();
 
+        // 一括更新
         // await _db.Books.Where(b => b.Publisher == "翔泳社")
         // .ExecuteUpdateAsync(setters =>
         //     setters.SetProperty(b => b.Price, b => (int)(b.Price * 0.8)));
         //     // setters.SetProperty(b => b.Price, 1000));
 
+        //　一括削除
         // await _db.Articles.Where(c => c.Category == "JavaScript")
         //     .ExecuteDeleteAsync();
         return Content("更新しました。");
