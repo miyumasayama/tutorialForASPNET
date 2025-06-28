@@ -85,6 +85,7 @@ namespace SelfAspNet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Isbn,Title,Price,Publisher,Published,Sample")] Book book)
         {
+            // モデルバインドの属性検証結果
             if (ModelState.IsValid)
             {
                 _context.Add(book);
@@ -94,6 +95,7 @@ namespace SelfAspNet.Controllers
                 TempData["Success"] = $"「{book.Title}」を登録しました。";
                 return RedirectToAction(nameof(Index));
             }
+            // 検証に失敗した場合は、入力画面を再描画
             return View(book);
         }
 

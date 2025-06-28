@@ -9,7 +9,7 @@ public class Book
 {
     public int Id { get; set; }
 
-    // [RegularExpression("978-4-[0-9]{2,5}-[0-9]{2,5}-[0-9X]",
+    // [RegularExpression("978-4-[0-9]{2,5}-[0-9]{2,5}-[0-9X]", 検証属性を使用することでモデルバインドのタイミングで自動的に検証を実施
     //     ErrorMessage = "{0}の形式が誤っています。")]
     // [Required(ErrorMessage = "RequiredError")]
     // [UIHint("Isbn")]
