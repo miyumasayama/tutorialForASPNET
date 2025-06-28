@@ -8,8 +8,8 @@ namespace SelfAspNet.Models;
 public class Book
 {
     public int Id { get; set; }
-    
-    // [RegularExpression("978-4-[0-9]{2,5}-[0-9]{2,5}-[0-9X]",
+
+    // [RegularExpression("978-4-[0-9]{2,5}-[0-9]{2,5}-[0-9X]", 検証属性を使用することでモデルバインドのタイミングで自動的に検証を実施
     //     ErrorMessage = "{0}の形式が誤っています。")]
     // [Required(ErrorMessage = "RequiredError")]
     // [UIHint("Isbn")]
@@ -55,8 +55,13 @@ public class Book
     // [Display(Name = "Book_Sample")]
     public bool Sample { get; set; }
 
-    // [Timestamp]
-    // public byte[]? RowVersion { get; set; }
+    // オブジェクトにバージョンを指定することで競合を検出
+    // byte[]型のプロパティにTimestamp属性をつけた
+    // エンティティを修正したらdbに反映
+    // dotnet ef migrations add AddRowVersionToBook
+    // dotnet ef database update
+    [Timestamp]
+    public byte[]? RowVersion { get; set; }
 
     public ICollection<Review> Reviews { get; } = new List<Review>();
     public ICollection<Author> Authors { get; } = new List<Author>();

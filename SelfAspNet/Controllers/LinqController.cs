@@ -371,22 +371,27 @@ public class LinqController : Controller
 
     public async Task<IActionResult> Update()
     {
+        // 更新対象の件数分だけ命令が発行されるため、オーバーヘッドが高い
         foreach (var b in _db.Books.Where(b => b.Publisher == "翔泳社"))
         {
             b.Price = (int)(b.Price * 0.8);
         }
         await _db.SaveChangesAsync();
 
+        // 一括更新
         // await _db.Books.Where(b => b.Publisher == "翔泳社")
         // .ExecuteUpdateAsync(setters =>
         //     setters.SetProperty(b => b.Price, b => (int)(b.Price * 0.8)));
         //     // setters.SetProperty(b => b.Price, 1000));
 
+        //　一括削除
         // await _db.Articles.Where(c => c.Category == "JavaScript")
         //     .ExecuteDeleteAsync();
         return Content("更新しました。");
     }
 
+    // * データの追加
+    // *　ただしエンティティを同時に追加することはあまりない（通常は、すでに存在しているプリンシパルエンティティに対して依存エンティティを追加する)
     public async Task<IActionResult> Insert()
     {
         _db.Reviews.Add(new Review
@@ -410,19 +415,20 @@ public class LinqController : Controller
 
     public async Task<IActionResult> Insert2()
     {
-        var book = await _db.Books.FindAsync(1);
+        var book = await _db.Books.FindAsync(1); // ここで既存のプリンシパルエンティティを取得
         _db.Reviews.Add(new Review
         {
             Name = "木村裕二",
             Body = "最近は、意外と書き方が変わっていて勉強になった。",
             LastUpdated = new DateTime(2024, 06, 03),
             Book = book!
-            // BookId = 1
+            // BookId = 1 //このように書いてもOK
         });
         await _db.SaveChangesAsync();
         return Content("レビューを追加しました。");
     }
 
+    // 既存データの書き換え
     public async Task<IActionResult> Associate()
     {
         var book = await _db.Books.FindAsync(1);
@@ -435,13 +441,17 @@ public class LinqController : Controller
 
     public async Task<IActionResult> Delete()
     {
-        // var b = await _db.Books.FindAsync(1);
+        // var b = await _db.Books.FindAsync(1); // 関連エンティティがある場合、これでは削除ができない
+
         var b = await _db.Books
             .Include(b => b.Reviews)
             .SingleAsync(b => b.Id == 1);
         _db.Books.Remove(b);
         await _db.SaveChangesAsync();
         return Content("データを削除しました。");
+
+        // 紐づいたレビュー情報は残しておきたいとき
+        // そもそもの参照ナビゲーションと外部キーをnull許容にする
     }
 
     public async Task<IActionResult> Transaction()
@@ -461,7 +471,7 @@ public class LinqController : Controller
             new Book
             {
                 Isbn = "978-4-7981-8094-6",
-                Title = "独習Java 第6版",  // null,
+                Title = "独習Java 第6版",  // 例えばnullにすると、Titleはnull非許容なのでエラーとなり、Booksのdbは変化しない,
                 Price = 3960,
                 Publisher = "翔泳社",
                 Published = new DateTime(2024, 02, 15),
@@ -474,7 +484,7 @@ public class LinqController : Controller
     }
     public async Task<IActionResult> Transaction2()
     {
-        using (var tx = _db.Database.BeginTransaction())
+        using (var tx = _db.Database.BeginTransaction()) // 毎確なトランザクションの宣言
         {
             try
             {
@@ -493,12 +503,12 @@ public class LinqController : Controller
                 _db.Books.Where(b => b.Publisher == "翔泳社")
                     .ExecuteUpdate(setters =>
                         setters.SetProperty(b => b.Price, b => (int)(b.Price * 0.8)));
-                tx.Commit();
+                tx.Commit(); // 更新のコミット
                 return Content("データベース処理が正常終了しました。");
             }
             catch (Exception)
             {
-                tx.Rollback();
+                tx.Rollback(); //更新のロールバック
                 return Content("データベース処理に失敗しました。");
             }
         }

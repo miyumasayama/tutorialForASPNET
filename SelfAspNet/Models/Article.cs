@@ -1,5 +1,6 @@
 namespace SelfAspNet.Models;
 
+// IRecordableTimestampインターフェースをArticleエンティティに適用する
 public class Article : IRecordableTimestamp
 {
     public int Id { get; set; }

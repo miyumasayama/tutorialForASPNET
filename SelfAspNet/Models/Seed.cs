@@ -7,9 +7,9 @@ public static class Seed
     public static async Task Initialize(IServiceProvider provider)
     {
         using var db = new MyContext(
-          provider.GetRequiredService<DbContextOptions<MyContext>>());
+          provider.GetRequiredService<DbContextOptions<MyContext>>()); // 引数からデータベースコンテキストを自分でインスタンス化
         if (await db.Articles.AnyAsync()) { return; }
-        db.Articles.AddRange(
+        db.Articles.AddRange( // 複数のレコードをまとめて追加(addRange)
             new Article
             {
                 Title = "ますます便利になるTypeScript！100",
@@ -42,6 +42,8 @@ public static class Seed
             }
 
         );
-        await db.SaveChangesAsync();
+        await db.SaveChangesAsync(); //最終的なデータ反映
     }
 }
+
+// Program.csの中で定義したい２社ライザーを呼び出す

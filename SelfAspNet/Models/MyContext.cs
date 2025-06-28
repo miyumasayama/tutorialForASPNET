@@ -16,6 +16,7 @@ public class MyContext : DbContext
 
     public DbSet<Photo> Photos { get; set; } = default!;
 
+    // インターセプターを追加することで、エンティティの作成日時や更新日時を自動で設定できる
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.AddInterceptors(new TimestampInterceptor());

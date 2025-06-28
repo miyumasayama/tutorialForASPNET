@@ -20,7 +20,7 @@ public class Review
 
     [Display(Name = "書籍")]
     public int BookId { get; set; }
-    // [DeleteBehavior(DeleteBehavior.SetNull)]
+    // [DeleteBehavior(DeleteBehavior.SetNull)] // DeleteBehaviorを設定することで、DBの機能としてSetNullを指定できる
     public Book Book { get; set; } = null!;
 
     // public virtual int BookId { get; set; }
