@@ -127,7 +127,7 @@ namespace SelfAspNet.Controllers
         // [HttpPut]
         // [AcceptVerbs("Post", "Put")]
         [ValidateAntiForgeryToken]
-        // public async Task<IActionResult> Edit(int id, [Bind("Id,Isbn,Title,Price,Publisher,Published,Sample,RowVersion")] Book book)
+        // public async Task<IActionResult> Edit(int id, [Bind("Id,Isbn,Title,Price,Publisher,Published,Sample,RowVersion")] Book book) RowVersion列を追加して、競合の検出を行う
         public async Task<IActionResult> Edit(int id, [Bind("Id,Isbn,Title,Price,Publisher,Published,Sample")] Book book)
         {
             if (id != book.Id)
@@ -150,9 +150,9 @@ namespace SelfAspNet.Controllers
                     }
                     else
                     {
-                        throw;
-                        // ModelState.AddModelError(string.Empty, "競合が検出されました。");
-                        // return View(book);
+                        // throw;
+                        ModelState.AddModelError(string.Empty, "競合が検出されました。");
+                        return View(book);
                     }
                 }
                 return RedirectToAction(nameof(Index));
@@ -207,42 +207,42 @@ namespace SelfAspNet.Controllers
         //     return View(book);
         // }
 
-            // GET: Books/Delete/5
-            public async Task<IActionResult> Delete(int? id)
+        // GET: Books/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
             {
-                if (id == null)
-                {
-                    return NotFound();
-                }
-
-                var book = await _context.Books
-                    .FirstOrDefaultAsync(m => m.Id == id);
-                if (book == null)
-                {
-                    return NotFound();
-                }
-
-                return View(book);
+                return NotFound();
             }
 
-            // POST: Books/Delete/5
-            [HttpPost, ActionName("Delete")]
-            [ValidateAntiForgeryToken]
-            public async Task<IActionResult> DeleteConfirmed(int id)
+            var book = await _context.Books
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (book == null)
             {
-                var book = await _context.Books.FindAsync(id);
-                if (book != null)
-                {
-                    _context.Books.Remove(book);
-                }
-
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return NotFound();
             }
 
-            private bool BookExists(int id)
+            return View(book);
+        }
+
+        // POST: Books/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            if (book != null)
             {
-                return _context.Books.Any(e => e.Id == id);
+                _context.Books.Remove(book);
             }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool BookExists(int id)
+        {
+            return _context.Books.Any(e => e.Id == id);
         }
     }
+}
