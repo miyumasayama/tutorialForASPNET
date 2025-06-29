@@ -169,7 +169,7 @@ namespace SelfAspNet.Controllers
             return View(book);
         }
 
-        // TryUpdateModelAsyncでの書換
+        // TryUpdateModelAsyncでの書換(引数へのバインドはモデル呼び出しタイミングで行われるのが通例だが、このメソッドを使用することでメソッドを使用することで任意のタイミングでバインドを実行できる)
         // [HttpPost]
         // [ValidateAntiForgeryToken]
         // public async Task<IActionResult> Edit(int id)
