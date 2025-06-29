@@ -5,7 +5,7 @@ using SelfAspNet.Lib;
 using SelfAspNet.Models;
 
 namespace SelfAspNet.Controllers;
-    public class BinderController : Controller
+public class BinderController : Controller
 {
     private readonly MyContext _db;
     private readonly IWebHostEnvironment _host;
@@ -22,12 +22,12 @@ namespace SelfAspNet.Controllers;
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateMulti(IEnumerable<Book> list)
+    public async Task<IActionResult> CreateMulti(IEnumerable<Book> list) //リストへのばいんど
     {
-        for (var i = 0; i < list.Count(); i++)
+        for (var i = 0; i < list.Count(); i++) // リストの内容を一つずつ取り出す
         {
             var b = list.ElementAt(i);
-            if (string.IsNullOrEmpty(b.Isbn))
+            if (string.IsNullOrEmpty(b.Isbn)) // ISBNが空の場合は、モデルステートから削除
             {
                 foreach (var key in
                   new[] { "Isbn", "Title", "Price", "Publisher", "Published" })
@@ -55,7 +55,7 @@ namespace SelfAspNet.Controllers;
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateMulti2(IDictionary<string, Book> list)
+    public async Task<IActionResult> CreateMulti2(IDictionary<string, Book> list) // ディクショナリーへのバインド
     {
         foreach (var e in list)
         {

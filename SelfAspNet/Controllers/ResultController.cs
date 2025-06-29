@@ -53,12 +53,12 @@ public class ResultController : Controller
         {
             bs = bs.Where(b => b.Published <= DateTime.Now);
         }
-        return PartialView("_AjaxResult", bs);
+        return PartialView("_AjaxResult", bs); // Partialviewクラスは部分ビューを呼び出す
     }
 
     public IActionResult Move()
     {
-        return Redirect("https://wings.msn.to/");
+        return Redirect("https://wings.msn.to/"); //RedirectResultクラスのメソッドRedirect(アプリ配下の遷移先でなくてもいい)
     }
 
     public IActionResult Local()
@@ -71,18 +71,18 @@ public class ResultController : Controller
         var bs = await _db.Books.FindAsync(id);
         if (bs == null)
         {
-            return StatusCode(404);
-            // return StatusCode(StatusCodes.Status404NotFound);
+            return StatusCode(404); // HttpStatusCodeResultクラスのメソッドStatusCode(HTTPステータスコードを指定して応答を返す)
+            // return StatusCode(StatusCodes.Status404NotFound); 
         }
         return View("../Books/Details", bs);
     }
 
-    public IActionResult Nothing()
+    public IActionResult Nothing() // アクションの結果としてコンテンツを返さない(コンテンツを返さないことを明確にする場合はNoContentResultクラスを使う)
     {
         return Empty;
     }
 
-    public IActionResult Plain()
+    public IActionResult Plain() // コンテンツをそのまま返す
     {
         return Content("こんにちは、世界！", "text/plain", Encoding.UTF8);
 
@@ -112,8 +112,11 @@ public class ResultController : Controller
             Encoding.GetEncoding("Shift_JIS"));
     }
 
-    public IActionResult Image(int id)
+    // ユーザ-に引数でpathを指定させる構成は脆弱性を生むため回避すべき(ex: アプリケーション側からProgram.csを開いてしまったり?)(パストラバーサル脆弱性)
+    // ファイルパスはDB管理の方がいいかも
+    public IActionResult Image(int id) //指定ファイルを出力
     {
+        // 仮想パスで指定する場合
         var path = $"/images/img_{id}.png";
         // return File(path, "image/png", "sample.png");
         // return File(path, "image/png");
@@ -122,10 +125,10 @@ public class ResultController : Controller
         // var path = $"C:/data/images/img_{id}.png";
         // return PhysicalFile(path, "image/png", "sample.png");
 
-        var fullpath = _host.WebRootPath + path;
+        var fullpath = _host.WebRootPath + path; // 物理パスの生成
         return File(path, "image/png",
-            new DateTimeOffset(System.IO.File.GetLastWriteTime(fullpath)),
-            new EntityTagHeaderValue(ComputeSha256(fullpath))
+            new DateTimeOffset(System.IO.File.GetLastWriteTime(fullpath)),// Last-Modeified=前回の更新日時を指定するタグ。
+            new EntityTagHeaderValue(ComputeSha256(fullpath)) // ETag=同一リソースには同一のタグが指定。キャッシュを利用する場合は、ETagを指定しておくと、ブラウザ側でキャッシュが有効な場合は304 Not Modifiedを返すようになる
         );
     }
 
@@ -134,6 +137,7 @@ public class ResultController : Controller
         return PhysicalFile(path, "application/octet-stream");
     }
 
+    // ファイルの本体のハッシュ値を計算する。ファイルの中身が変更されていたら、ハッシュ値も変わるため、ETagとして利用できる。
     private static string ComputeSha256(string path)
     {
         using var sha = SHA512.Create();
@@ -147,6 +151,7 @@ public class ResultController : Controller
         return $"\"{result.ToString()}\"";
     }
 
+    // 動的に取得したバイナリデータを返す
     public async Task<IActionResult> Photo(int id = 1)
     {
         var p = await _db.Photos.FindAsync(id);
@@ -159,8 +164,8 @@ public class ResultController : Controller
 
     public IActionResult Pdf()
     {
-        var stream = new MemoryStream();
-        var doc = new iText.Layout.Document(
+        var stream = new MemoryStream(); //データを一時的に保持するためのメモリストリームを生成
+        var doc = new iText.Layout.Document( // ドキュメントを生成
           new PdfDocument(
             new PdfWriter(stream)
           )
@@ -173,15 +178,15 @@ public class ResultController : Controller
         // );
         // var doc = new iText.Layout.Document(pdf);
 
-        var font = PdfFontFactory.CreateFont("HeiseiKakuGo-W5", "UniJIS-UCS2-H");
+        var font = PdfFontFactory.CreateFont("HeiseiKakuGo-W5", "UniJIS-UCS2-H"); //フォントを準備
         doc.SetFont(font);
-        doc.Add(
+        doc.Add( // 文字列の生成
           new Paragraph("こんにちは、")
             .Add(new Text("世界！")
               .SetFontSize(20)
               .SetFontColor(new DeviceRgb(255, 0, 0))
             ));
-        doc.Close();
+        doc.Close();// ドキュメントを閉じることで、PDFの内容が確定する
         return File(stream.ToArray(), MediaTypeNames.Application.Pdf);
         // return File(stream.ToArray(), MediaTypeNames.Application.Pdf, "sample.pdf");
     }
@@ -209,6 +214,7 @@ public class ResultController : Controller
 
     public async Task<IActionResult> Output()
     {
+        // 自作のActionResultクラスの呼び出し
         return new CsvResult(await _db.Books.ToListAsync());
     }
 }
