@@ -214,6 +214,7 @@ public class ResultController : Controller
 
     public async Task<IActionResult> Output()
     {
+        // 自作のActionResultクラスの呼び出し
         return new CsvResult(await _db.Books.ToListAsync());
     }
 }
