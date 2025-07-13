@@ -50,7 +50,7 @@ namespace SelfAspNet.Controllers
         }
 
         // GET: Books/Details/5
-        // [ResponseCache(Duration = 60)]
+        // [ResponseCache(Duration = 60)] // キャッシュの有効秒数
         // [ResponseCache(Duration = 60, VaryByQueryKeys = new[] { "mode" })]
         // [ResponseCache(Duration = 60, VaryByHeader = "User-Agent")]
         // [ResponseCache(CacheProfileName = "MyCache")]
@@ -82,7 +82,7 @@ namespace SelfAspNet.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken] // トークンチェック
         public async Task<IActionResult> Create([Bind("Id,Isbn,Title,Price,Publisher,Published,Sample")] Book book)
         {
             // モデルバインドの属性検証結果
