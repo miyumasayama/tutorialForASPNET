@@ -2,7 +2,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace SelfAspNet.Lib;
-
+// クッキーの値をバインドする
 public class HttpCookieValueProvider :
   BindingSourceValueProvider, IEnumerableValueProvider
 {

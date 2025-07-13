@@ -140,6 +140,9 @@ public class BinderController : Controller
     }
 
     [HttpPost]
+
+    // モデルバインダーを利用する
+    // 入力値を受け取り、その結果を返す
     public IActionResult Custom(
         [ModelBinder(typeof(DateModelBinder))] DateTime current)
     {
