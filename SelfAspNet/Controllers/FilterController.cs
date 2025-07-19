@@ -5,11 +5,12 @@ using SelfAspNet.Lib;
 
 namespace SelfAspNet.Controllers;
 
-// [MyLog]
+// [MyLog] //コントローター単位でフィルターを適用する場合は、コントローラークラスに属性を付与
 // [MyControllerFilter]
 // [MyControllerFilter(Order = int.MinValue)]
 public class FilterController : Controller
 {
+    // コントローター単位でフィルターを適用する場合、controllerクラスがIactionFilterを継承しているため、オーバーライドでもok(他のコントローラで再利用しないなら便利)
     // public override void OnActionExecuting(ActionExecutingContext context)
     // {
     //     Console.WriteLine($"【Before】{context.ActionDescriptor.DisplayName}が実行されます。");
