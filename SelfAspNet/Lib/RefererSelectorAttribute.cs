@@ -11,7 +11,9 @@ public class RefererSelectorAttribute : ActionMethodSelectorAttribute
   {
     AllowNull = allowNull;
   }
-  
+
+
+  // リクエストに対してアクションが有効であるかを判定
   public override bool IsValidForRequest(
     RouteContext routeContext, ActionDescriptor action)
   {

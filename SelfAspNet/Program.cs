@@ -31,8 +31,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews(options =>
 {
     options.ValueProviderFactories.Add(new HttpCookieValueProviderFactory());
-    // options.ModelBinderProviders.Insert(0, new DateModelBinderProvider());
-    // options.Filters.Add<MyLogAttribute>();
+    // options.ModelBinderProviders.Insert(0, new DateModelBinderProvider()); // バインダープロバイダーを登録。0で登録順を先頭にするss
+    // options.Filters.Add<MyLogAttribute>(); // アプリ単位で負フィルターの登録
     // options.Filters.Add<MyAppFilterAttribute>(int.MaxValue);
     // options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
     // options.CacheProfiles.Add("MyCache", new CacheProfile {
@@ -61,8 +61,8 @@ builder.Services.AddDbContext<MyContext>(options =>
         .UseSqlServer(
             builder.Configuration.GetConnectionString("MyContext")
         )
-        // .UseModel(MyContextModel.Instance)
-        // .UseSqlServer(builder.Configuration.GetConnectionString("MyContext"))
+// .UseModel(MyContextModel.Instance)
+// .UseSqlServer(builder.Configuration.GetConnectionString("MyContext"))
 );
 
 builder.Services.AddTransient<IBookRepository, BookRepository>();
@@ -204,6 +204,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Httpメソッドオーベーライドの有効化
 app.UseHttpMethodOverride(new HttpMethodOverrideOptions
 {
     FormFieldName = "_method"

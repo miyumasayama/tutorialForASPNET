@@ -8,9 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="itext.font-asian" Version="8.0.3" />
-    <PackageReference Include="itext7" Version="8.0.3" />
-    <PackageReference Include="itext7.bouncy-castle-adapter" Version="8.0.3" />
+    <PackageReference Include="itext.font-asian" Version="9.2.0" />
+    <PackageReference Include="itext7" Version="8.0.2" />
+    <PackageReference Include="itext7.bouncy-castle-adapter" Version="9.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
