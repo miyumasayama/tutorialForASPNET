@@ -1,10 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 
+// リポジトリパターン
+// データベース操作を抽象化することで、アクションからデータベースを意識させない
+// それによって、本番では本番、テストではテスト用のデータ、というように、異なるデータベースへのアクセスを可能にする
+
 namespace SelfAspNet.Models;
 
 public class BookRepository : IBookRepository
 {
     private readonly MyContext _db;
+
     public BookRepository(MyContext db)
     {
         _db = db;
