@@ -204,6 +204,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Httpメソッドオーベーライドの有効化
 app.UseHttpMethodOverride(new HttpMethodOverrideOptions
 {
     FormFieldName = "_method"
